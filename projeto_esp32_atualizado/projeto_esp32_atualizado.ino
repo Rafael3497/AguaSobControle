@@ -21,6 +21,9 @@ long lastTime = 0;
 // Pinos para o sensor ultrassônico
 #define echoPin 13
 #define trigPin 12
+const int blueLED = 14; // Pino para a luz azul
+const int redLED = 27;  // Pino para a luz vermelha
+
 
 // Variáveis para o sensor ultrassônico
 long duration;
@@ -92,5 +95,16 @@ void loop() {
 
 
         lastTime = currentTime;
+
+                // Verifica a conexão Wi-Fi e acende a luz correspondente
+        if (WiFi.status() == WL_CONNECTED) {
+            digitalWrite(blueLED, HIGH); // Acende a luz azul
+            digitalWrite(redLED, LOW); // Desliga a luz vermelha
+            delay(1000); // Espera por 1 segundo
+        } else {
+            digitalWrite(blueLED, LOW); // Desliga a luz azul
+            digitalWrite(redLED, HIGH); // Acende a luz vermelha
+            delay(1000); // Espera por 1 segundo
+        }
     }
 }
