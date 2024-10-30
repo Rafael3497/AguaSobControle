@@ -64,4 +64,4 @@ O sistema oferece monitoramento remoto eficiente do nível e da vazão da água,
 Professor Orientador: Manoel Miqueias Maia
 
 ## Licença
-Este projeto é distribuído sob a licença MIT. Veja [LICENSE](Rafael_Ye) para mais informações.
+Este projeto é distribuído sob a licença MIT. Veja [LICENSE](https://github.com/Rafael3497) para mais informações.
